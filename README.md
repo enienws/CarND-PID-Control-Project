@@ -2,6 +2,67 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+##What is a PID Controller
+PID controller is a control loop feedback controller. This type of controller is used widely among different control problems. 
+
+PID controller consists of three components named as Proportional, Integrative, Derivative. 
+
+Proportional error is proportional to systems overall error. Derivative error is propportional to how fast the error increasing or decreasing. Integrative error is proportional to cumulative error that depends to system run before. 
+
+Three errors are implemented by using the following code block:
+	
+	d_error = cte - p_error;
+	p_error = cte;
+	i_error += cte;
+
+Each kind of error types are used to provide a smooth system act. Not all the systems need to have all the components simple P controllers or PD controllers may be implemented as well. 
+
+##PID Controller Implementation
+In the project source code we have PID.cpp and PID.h files. These files define the PID class which implements a simple PID controller. 
+
+In UpdateError method, three different errors are defined. In TotalError method, total error of the system is calculated using three types of error. This result is given as a steering value to the simulator. 
+
+##Tuning PID Parameters
+I have chosen to tune PID parameters by a manual try and error way. Since P error affects the overall system a lot, I first start to tune P value by setting I and D values to 0. In other words, I started by a simple P controller as a first step. I started to tune D parameter as the P controller performs well and finally I parameter is tuned. 
+
+Below you can find different videos related to different steps of tuning:
+
+Tuning the P controller, Kp = 5
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_5-2019-06-11_11.18.40.mkv" type="video/mp4">
+</video>
+
+Tuning the P controller, Kp = 2.5
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_2_5-2019-06-11_11.20.12.mkv" type="video/mp4">
+</video>
+
+Tuning the P controller, Kp = 0.5
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_0_5-2019-06-11_11.21.08.mkv" type="video/mp4">
+</video>
+
+Tuning the P controller, Kp = 0.25
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_0_25-2019-06-11_11.22.00.mkv" type="video/mp4">
+</video>
+
+It seems P controller works well with Kp=0.25. After this step I started to work on Derivative term. 
+
+Tuning the PD controller, Kp = 0.25, Kd = 
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_0_25_i_1_5-2019-06-11_11.23.12.mkv" type="video/mp4">
+</video>
+
+And finally the PID controller: Kp = 0.25, Kd = 1.5, Ki = 0.003
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_p_0_25_i_1_5_i-2019-06-11_11.25.49.mkv" type="video/mp4">
+</video>
+
+The final PID Controller: Kp = 0.25, Kd = 1.5, Ki = 0.0003
+<video width="480" height="270" controls>
+  <source src="videos/pid_controller_final-2019-06-11_11.27.46.mkv" type="video/mp4">
+</video>
 
 ## Dependencies
 
