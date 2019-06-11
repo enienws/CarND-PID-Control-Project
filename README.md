@@ -28,21 +28,25 @@ I have chosen to tune PID parameters by a manual try and error way. Since P erro
 Below you can find different videos related to different steps of tuning:
 
 Tuning the P controller, Kp = 5
+[Link to video file](videos/pid_controller_p_5-2019-06-11_11.18.40.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_5-2019-06-11_11.18.40.mkv" type="video/mp4">
 </video>
 
 Tuning the P controller, Kp = 2.5
+[Link to video file](videos/pid_controller_p_2_5-2019-06-11_11.20.12.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_2_5-2019-06-11_11.20.12.mkv" type="video/mp4">
 </video>
 
 Tuning the P controller, Kp = 0.5
+[Link to video file](videos/pid_controller_p_0_5-2019-06-11_11.21.08.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_0_5-2019-06-11_11.21.08.mkv" type="video/mp4">
 </video>
 
 Tuning the P controller, Kp = 0.25
+[Link to video file](videos/pid_controller_p_0_25-2019-06-11_11.22.00.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_0_25-2019-06-11_11.22.00.mkv" type="video/mp4">
 </video>
@@ -50,16 +54,19 @@ Tuning the P controller, Kp = 0.25
 It seems P controller works well with Kp=0.25. After this step I started to work on Derivative term. 
 
 Tuning the PD controller, Kp = 0.25, Kd = 
+[Link to video file](videos/pid_controller_p_0_25_i_1_5-2019-06-11_11.23.12.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_0_25_i_1_5-2019-06-11_11.23.12.mkv" type="video/mp4">
 </video>
 
 And finally the PID controller: Kp = 0.25, Kd = 1.5, Ki = 0.003
+[Link to video file](videos/pid_controller_p_0_25_i_1_5_i-2019-06-11_11.25.49.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_p_0_25_i_1_5_i-2019-06-11_11.25.49.mkv" type="video/mp4">
 </video>
 
 The final PID Controller: Kp = 0.25, Kd = 1.5, Ki = 0.0003
+[Link to video file](videos/pid_controller_final-2019-06-11_11.27.46.mkv)
 <video width="480" height="270" controls>
   <source src="videos/pid_controller_final-2019-06-11_11.27.46.mkv" type="video/mp4">
 </video>
